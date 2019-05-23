@@ -21,6 +21,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rails-i18n'
 # Manage Procfile-based applications http://ddollar.github.com/foreman
 gem 'foreman'
+# Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/devise
+gem 'devise'
+# Translations for the devise gem 
+gem 'devise-i18n'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

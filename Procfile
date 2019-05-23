@@ -1,0 +1,1 @@
+web: rails s -b 0.0.0.0 TRUSTED_IP=200.164.255.254

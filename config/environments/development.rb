@@ -5,6 +5,9 @@ Rails.application.configure do
   BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
   config.consider_all_requests_local = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000}
+  
+  #Foreman config
+  $stdout.sync = true
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development

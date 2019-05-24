@@ -25,6 +25,13 @@
 </head>
 
 <body>
-  <%= yield %>
+  <%= render partial: "layouts/site_shared/navigation" %>
+  <div class="container">
+    <div class="row">
+      <%= render partial: "layouts/site_shared/list_group" %>
+      <%= yield %>
+    </div>
+  </div>
+  <%= render partial: "layouts/site_shared/footer" %>
 </body>
 </html>

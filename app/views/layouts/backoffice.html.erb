@@ -29,8 +29,17 @@
 </head>
 
 <body id="page-top">
-
-  <%=yield%>
+  <div id="wrapper">
+    <%= render partial: 'layouts/backoffice_shared/sidebar' %>
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <%= render partial: 'layouts/backoffice_shared/topbar' %>
+        <%=yield%>
+        <%= render partial: 'layouts/backoffice_shared/footer' %>
+      </div>
+    </div>
+    <%= render partial: 'layouts/backoffice_shared/misc' %>
+  </div>
 </body>
 
 </html>

@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 
 
 #User-installed Gems
+# A gem to automate using jQuery with Rails 
+gem 'jquery-rails'
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
 # Manage Procfile-based applications http://ddollar.github.com/foreman
@@ -26,6 +28,8 @@ gem 'foreman'
 gem 'devise'
 # Translations for the devise gem 
 gem 'devise-i18n'
+# Rails gem of the Bootstrap based admin theme SB Admin 2.
+gem 'bootstrap_sb_admin_base_v2'
 
 
 # Use CoffeeScript for .coffee assets and views

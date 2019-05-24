@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+
 #User-installed Gems
 # Repository for collecting Locale data for Ruby on Rails I18n as well as other interesting, Rails related I18n stuff http://rails-i18n.org
 gem 'rails-i18n'
@@ -25,6 +26,7 @@ gem 'foreman'
 gem 'devise'
 # Translations for the devise gem 
 gem 'devise-i18n'
+
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -60,6 +62,8 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Better error page for Rack apps 
   gem 'better_errors'
+  # Generate Entity-Relationship Diagrams for Rails applications http://voormedia.github.io/rails-erd/
+  gem 'rails-erd'
 end
 
 

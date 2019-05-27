@@ -1,3 +1,13 @@
-<h1>
-  Criar
-</h1>
+ <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">
+        Nova Categoria
+    </div>
+  <div class="card-body col-lg-6">
+    <%= form_for([:backoffice, @category]) do |form| %>
+      <%= form.label :description%>
+      <%= form.text_field :description, class:"form-control", placeholder:"Ex.: Eletrodomésticos" %>
+      <%= form.submit "Criar", class:"btn btn-primary", style:"margin-top: 5px"%>
+    <% end %>
+  </div>
+</div>

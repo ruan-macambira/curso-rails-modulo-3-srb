@@ -1,24 +1,32 @@
 class Backoffice::CategoriesController < BackofficeController
-  layout "backoffice"
-  before_action :authenticate_admin!
   
   def index
     @categories = Category.all
   end
   
   def new
-    
+    @category = Category.new
+  end
+  
+  def create
+    @category = Category.new(params_category)
+    if @category.save
+      redirect_to backoffice_categories_path, notice: "Categoria cadastrada com suesso"
+    else
+      render :new, notice: "Erro ao cadastrar Categoria"
+    end
   end
   
   def edit
-    
   end
   
   def update
     
   end
   
-  def create
-    
+  private
+  
+  def params_category
+    params.require(:category).permit(:description)
   end
 end

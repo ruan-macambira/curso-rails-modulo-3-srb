@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  namespace :backoffice do
+    get 'categories', to: 'categories#index'
+  end
   namespace :site do
     get 'home', to: 'home#index'
-  end
-  namespace :backoffice do
-    get 'dashboard', to: 'dashboard#index'
   end
   
   get 'backoffice', to: 'backoffice/dashboard#index'

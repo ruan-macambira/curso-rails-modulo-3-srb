@@ -34,7 +34,9 @@
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <%= render partial: 'layouts/backoffice_shared/topbar' %>
-        <%=yield%>
+        <div class="container-fluid">
+          <%=yield%>
+        </div>
         <%= render partial: 'layouts/backoffice_shared/footer' %>
       </div>
     </div>

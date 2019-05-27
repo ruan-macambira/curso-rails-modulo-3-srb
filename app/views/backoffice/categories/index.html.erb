@@ -5,6 +5,14 @@
         <%=link_to new_backoffice_category_path do%> <i class="fas fa-plus float-right"></i><% end %></h6>
     </div>
   <div class="card-body">
+    <% if notice %>
+    <div class="card mb-4 py-3 border-left-success">
+      <div class="card-body">
+        <%= notice %>
+      </div>
+    </div>
+    <% end %>
+    
     <div class="responsive-table">
     <table class="table table-striped table-bordered table-hover" id="data-table">
         <thead>

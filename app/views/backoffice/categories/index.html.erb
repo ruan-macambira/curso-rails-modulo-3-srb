@@ -1,6 +1,8 @@
  <div class="card shadow mb-4">
     <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Categorias</h6>
+      <h6 class="m-0 font-weight-bold text-primary">
+        Categorias
+        <%=link_to new_backoffice_category_path do%> <i class="fas fa-plus float-right"></i><% end %></h6>
     </div>
   <div class="card-body">
     <div class="responsive-table">
@@ -8,16 +10,20 @@
         <thead>
           <tr>  
             <th>#</th>
-            <th colspan=3>Descrição</th>
+            <th colspan=2>Descrição</th>
           </tr>
         </thead>
         <tbody>
           <% @categories.each do |category| %>
             <tr>
               <td><%=category.id%></td>
-              <td><%=category.description%></td>
-              <td><i class="far fa-edit"></i>
-              <i class="far fa-trash-alt"></i></td>
+              <td>
+                <%=category.description%>
+                <span class="float-right">
+                  <%= link_to edit_backoffice_category_path(category) do %> <i class="far fa-edit"></i><% end %>
+                  <%= link_to "#" do %> <i class="far fa-trash-alt"></i><% end %>
+                </span>
+              </td>
             </tr>
         <% end %>
         </tbody>

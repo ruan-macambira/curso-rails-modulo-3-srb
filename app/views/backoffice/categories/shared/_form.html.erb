@@ -1,0 +1,22 @@
+ <div class="card shadow mb-4">
+   <% if @category.errors.any? %>
+    <div class="card mb-4 py-3 border-left-warning">
+      <div class="card-body">
+        <ul>
+          <%= @category.errors.full_messages.each do |message| %>
+            <li><%=message%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary"><%=form_mode%></div>
+    <div class="card-body col-lg-6">
+    <%= form_for([:backoffice, @category]) do |form| %>
+      <%= form.label :description%>
+      <%= form.text_field :description, class:"form-control", placeholder:"Ex.: Eletrodomésticos" %>
+      <%= form.submit "Criar", class:"btn btn-primary", style:"margin-top: 5px"%>
+    <% end %>
+  </div>
+</div>

@@ -39,6 +39,7 @@ gem 'devise-i18n'
 # javascript
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '4.3.1'
+  gem 'rails-assets-notifyjs'
 end
 
 

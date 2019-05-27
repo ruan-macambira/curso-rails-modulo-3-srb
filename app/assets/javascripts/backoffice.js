@@ -1,4 +1,5 @@
 //= require bootstrap
+//= require notifyjs
 
 (function($) {
   "use strict"; // Start of use strict

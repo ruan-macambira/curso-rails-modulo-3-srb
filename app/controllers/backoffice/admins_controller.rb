@@ -1,5 +1,5 @@
 class Backoffice::AdminsController < BackofficeController
-  before_action :set_admin, only: [:edit, :update]
+  before_action :set_admin, only: [:edit, :update, :destroy]
   
   def index
     @admins = Admin.all
@@ -12,7 +12,7 @@ class Backoffice::AdminsController < BackofficeController
   def create
     @admin = Admin.new(params_admin)
     if @admin.save
-      redirect_to backoffice_admins_path, notice: "Admnistrador cadastrada com suesso"
+      redirect_to backoffice_admins_path, notice: "Administrador cadastrada com suesso"
     else
       render :new, notice: "Erro ao cadastrar Administrador"
     end
@@ -34,6 +34,14 @@ class Backoffice::AdminsController < BackofficeController
       redirect_to backoffice_admins_path, notice: "Administrador atualizada com suesso"
     else
       render :edit, notice: "Erro ao atualizar Admnistrador"
+    end
+  end
+  
+  def destroy
+    if @admin.destroy
+      redirect_to backoffice_admins_path, notice: "Administrador removido com sucesso"
+    else
+      render :index
     end
   end
   

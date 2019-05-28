@@ -76,6 +76,8 @@ group :development do
   gem 'rails-erd'
   # Rails >= 3 pry initializer 
   gem 'pry-rails'
+  # A library for generating fake data such as names, addresses, and phone numbers. 
+  gem 'faker'
 end
 
 

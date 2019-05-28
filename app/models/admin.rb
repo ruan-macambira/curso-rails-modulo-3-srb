@@ -5,6 +5,8 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
   enum  role: [ :full, :restricted ]
   
+  scope :with_full_access, -> { where(role: 'full') }
+  
   def role_description
     if self.role == 'full'
       return 'Acesso Completo'

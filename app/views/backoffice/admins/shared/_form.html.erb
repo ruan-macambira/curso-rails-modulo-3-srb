@@ -1,0 +1,29 @@
+ <div class="card shadow mb-4">
+   <% if @admin.errors.any? %>
+    <div class="card mb-4 py-3 border-left-warning">
+      <div class="card-body">
+        <ul>
+          <% @category.errors.full_messages.each do |message| %>
+            <li><%=message%></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <% end %>
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary"><%=form_mode%></div>
+    <div class="card-body col-lg-6">
+    <%= form_for([:backoffice, @admin]) do |form| %>
+      <%= form.label :email%>
+      <%= form.text_field :email, class:"form-control", placeholder:"Ex.: contato@escamboapp.com" %>
+      
+      <%= form.label :password %>
+      <%= form.password_field :password, class:"form-control"%>
+      
+      <%= form.label :password_confirmation %>
+      <%= form.password_field :password_confirmation, class:"form-control" %>
+      
+      <%= form.submit "Aplicar", class:"btn btn-primary", style:"margin-top: 5px"%>
+    <% end %>
+  </div>
+</div>

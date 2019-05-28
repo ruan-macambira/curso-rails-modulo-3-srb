@@ -22,11 +22,19 @@ class Backoffice::AdminsController < BackofficeController
   end
   
   def update
-   if @admin.update(params_category)
-     redirect_to backoffice_categories_path, notice: "Administrador atualizada com suesso"
-   else
-     render :edit, notice: "Erro ao atualizar Admnistrador"
-   end
+    passwd = params[:admin][:password]
+    passwd_confirm = params[:admin][:password_confirmation]
+    
+    if passwd.blank? && passwd_confirm.blank?
+      params[:admin].delete(:password)
+      params[:admin].delete(:password_confirmation)
+    end
+    
+    if @admin.update(params_admin)
+      redirect_to backoffice_admins_path, notice: "Administrador atualizada com suesso"
+    else
+      render :edit, notice: "Erro ao atualizar Admnistrador"
+    end
   end
   
   private

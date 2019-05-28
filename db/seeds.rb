@@ -24,3 +24,11 @@ categories.each do |category|
 end
 
 puts "CATEGORIAS cadastradas com sucesso!"
+
+puts "Cadastrando Administrador Padrão"
+
+Admin.create!(email:"admin@admin.com",
+              password:"123456",
+              password_confirmation:"123456")
+
+puts "Admnistrador Cadastrado com sucesso!"

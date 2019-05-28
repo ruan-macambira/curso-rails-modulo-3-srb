@@ -3,7 +3,7 @@
     <div class="card mb-4 py-3 border-left-warning">
       <div class="card-body">
         <ul>
-          <%= @category.errors.full_messages.each do |message| %>
+          <% @category.errors.full_messages.each do |message| %>
             <li><%=message%></li>
           <% end %>
         </ul>

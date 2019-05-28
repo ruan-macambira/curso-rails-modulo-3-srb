@@ -25,12 +25,13 @@
 
   <!-- Custom fonts for this template-->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-  
-  <script>$.notify("Sucesso!")</script>
 
 </head>
 
 <body id="page-top">
+  <% if notice %>
+    <script>$.notify("<%=notice%>", "success")</script>
+  <%end%>
   <div id="wrapper">
     <%= render partial: 'layouts/backoffice_shared/sidebar' %>
     <div id="content-wrapper" class="d-flex flex-column">

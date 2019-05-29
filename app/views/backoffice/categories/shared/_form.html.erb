@@ -16,7 +16,7 @@
     <%= form_for([:backoffice, @category]) do |form| %>
       <%= form.label :description%>
       <%= form.text_field :description, class:"form-control", placeholder:"Ex.: Eletrodomésticos" %>
-      <%= form.submit "Criar", class:"btn btn-primary", style:"margin-top: 5px"%>
+      <%= form.submit t(:'buttons.save'), class:"btn btn-primary", style:"margin-top: 5px"%>
     <% end %>
   </div>
 </div>

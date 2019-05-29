@@ -23,6 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form. 
+gem 'enum_help'
 
 
 #User-installed Gems

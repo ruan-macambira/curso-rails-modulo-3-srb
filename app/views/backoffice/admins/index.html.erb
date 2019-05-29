@@ -1,7 +1,7 @@
  <div class="card shadow mb-4">
     <div class="card-header py-3">
       <h6 class="m-0 font-weight-bold text-primary">
-        Categorias
+        <%=@admins.model_name.human%>
         <%=link_to new_backoffice_admin_path do%> <i class="fas fa-plus float-right"></i><% end %></h6>
     </div>
   <div class="card-body">
@@ -10,9 +10,9 @@
         <thead>
           <tr>  
             <th>#</th>
-            <th>Nome</th>
-            <th>Cargo</th>
-            <th>E-mail</th>
+            <th><%=@admins.model.human_attribute_name(:name)%></th>
+            <th><%=@admins.model.human_attribute_name(:role)%></th>
+            <th><%=@admins.model.human_attribute_name(:email)%></th>
           </tr>
         </thead>
         <tbody>
@@ -20,7 +20,7 @@
             <tr>
               <td><%=admin.id%></td>
               <td><%=admin.name%></td>
-              <td><%=admin.role_description%></td>
+              <td><%=admin.role_i18n%></td>
               <td>
                 <%=admin.email%>
                 <span class="float-right">

@@ -3,15 +3,8 @@ class Admin < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  enum  role: [ :full, :restricted ]
+  enum  role: { :full => 0, :restricted => 1}
   
   scope :with_full_access, -> { where(role: 'full') }
-  
-  def role_description
-    if self.role == 'full'
-      return 'Acesso Completo'
-    else
-      return 'Acesso Restrito'
-    end
-  end
+
 end

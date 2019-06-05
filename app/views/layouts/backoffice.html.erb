@@ -14,11 +14,11 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= stylesheet_link_tag    'backoffice', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= stylesheet_link_tag    'backoffice', media: 'all' %>
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'backoffice', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'backoffice' %>
   
   <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
   
@@ -31,6 +31,9 @@
 <body id="page-top">
   <% if notice %>
     <script>$.notify("<%=notice%>", "success")</script>
+  <%end%>
+  <% if alert %>
+    <script>$.notify("<%=alert%>", "error")</script>
   <%end%>
   <div id="wrapper">
     <%= render partial: 'layouts/backoffice_shared/sidebar' %>

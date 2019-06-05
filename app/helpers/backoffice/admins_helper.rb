@@ -1,5 +1,4 @@
 module Backoffice::AdminsHelper
-
   def admin_remove(admin)
     if current_admin.id != admin.id
       link_to(backoffice_admin_path(admin),

@@ -1,7 +1,7 @@
 "pt-BR":
   messages:
     confirm: Tem certeza?
-    confirm_removal: Você Deseja realmente excluir <b>%{item}</b>?
+    confirm_removal: Você Deseja realmente excluir %{item}?
     listing: Listando %{model}
     editing: Editando %{model}
     new: Novo %{model}
@@ -9,3 +9,5 @@
     created: "%{model} criado com sucesso!"
     updated: "%{model} atualizado com sucesso!"
     destroyed: "%{model} removido com sucesso!"
+    errors:
+      not_authorized: "Você não está autorizando a fazer esta ação"
